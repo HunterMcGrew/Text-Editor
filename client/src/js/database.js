@@ -12,7 +12,7 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
+
 // put route for openDB (IDB)
 export const putDb = async (content) => {
 
@@ -29,7 +29,7 @@ export const putDb = async (content) => {
   return result;
 };
 
-// TODO: Add logic for a method that gets all the content from the database
+
 // get ALL route for openDB (IDB)
 export const getDb = async () => {
   
