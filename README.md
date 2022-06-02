@@ -2,7 +2,7 @@
 
 A simple browser based text editor! 
 
-![image]()
+![image](https://github.com/HunterMcGrew/Text-Editor/blob/main/text_editor.PNG?raw=true)
 
 ## Heroku
 
