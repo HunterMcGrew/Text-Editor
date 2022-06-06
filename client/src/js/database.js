@@ -13,25 +13,8 @@ const initdb = async () =>
   });
 
 
-// put route for openDB (IDB)
-export const putDb = async (content) => {
-
-  const jateDb = await openDB("jate", 1);
-
-  const tx = jateDb.transaction("jate", "readwrite");
-
-  const store = tx.objectStore("jate");
-
-  const request = store.put({ id: 1, value: content});
-
-  const result = await request;
-
-  return result;
-};
-
-
 // get ALL route for openDB (IDB)
-export const getDb = async (id, content) => {
+export const getDb = async () => {
   
   const jateDb = await openDB("jate", 1);
 
@@ -43,7 +26,28 @@ export const getDb = async (id, content) => {
 
   const result = await request;
 
+  console.log("get route working?");
+
   return result;
 };
+
+// put route for openDB (IDB)
+export const putDb = async (content) => {
+
+  const jateDb = await openDB("jate", 1);
+
+  const tx = jateDb.transaction("jate", "readwrite");
+
+  const store = tx.objectStore("jate");
+
+  const request = store.put({ "jate": content});
+
+  const result = await request;
+
+  console.log("Put route must be working...");
+
+  return result;
+};
+
 
 initdb();
